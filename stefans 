@@ -1,0 +1,38 @@
+
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract HlalelePayment {
+    
+    address public owner;
+    
+    struct Payment {
+        address payer;
+        uint256 amount;
+        string paystackRef;
+        bool confirmed;
+    }
+    
+    mapping(uint256 => Payment) public payments;
+    uint256 public paymentCount;
+    
+    event PaymentReceived(uint256 id, address payer, uint256 amount, string paystackRef);
+    event PaymentConfirmed(uint256 id);
+    
+    constructor() {
+        owner = msg.sender;
+    }
+    
+    function makePayment(string memory _paystackRef) public payable {
+        require(msg.value > 0, "Amount must be greater than 0");
+        paymentCount++;
+        payments[paymentCount] = Payment(msg.sender, msg.value, _paystackRef, false);
+        emit PaymentReceived(paymentCount, msg.sender, msg.value, _paystackRef);
+    }
+    
+    function confirmPayment(uint256 _id) public {
+        require(msg.sender == owner, "Only owner can confirm");
+        payments[_id].confirmed = true;
+        emit PaymentConfirmed(_id);
+    }
+}
