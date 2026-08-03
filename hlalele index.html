@@ -20,6 +20,22 @@
     h1 { margin: 0; font-size: 2.5em; }
     section { padding: 40px 20px; }
     h2 { color: #003366; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #003366;
+    }
     footer {
       background: #eee;
       padding: 20px;
@@ -36,13 +52,47 @@
   </header>
 
   <section>
-    <h2>Work</h2>
-    <p>DAO governance systems, onboarding rituals, and payment integration.</p>
+    <h2>Selected Work</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Signal · 2026</h3>
+        <p>Evaluation tooling that makes governance regressions obvious.</p>
+        <p><strong>Stack:</strong> DAO Portal · Metrics · Compliance</p>
+      </div>
+      <div class="card">
+        <h3>Quill · 2025</h3>
+        <p>A writing assistant scroll that keeps the founder in the loop.</p>
+        <p><strong>Stack:</strong> Streaming · AI SDK · Ritual Docs</p>
+      </div>
+      <div class="card">
+        <h3>Atlas · 2025</h3>
+        <p>Retrieval over Hlalele’s archive of governance scrolls.</p>
+        <p><strong>Stack:</strong> RAG · Embeddings · Infra</p>
+      </div>
+      <div class="card">
+        <h3>Loom · 2024</h3>
+        <p>Durable agent workflows you can read like a diagram.</p>
+        <p><strong>Stack:</strong> Agents · Tooling · TypeScript</p>
+      </div>
+    </div>
   </section>
 
   <section>
-    <h2>Writing</h2>
-    <p>Scrolls and essays on sovereignty, boundary protocols, and founder development.</p>
+    <h2>Writing & Notes</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>2026 · Essay</h3>
+        <p>Governance as a design problem — deciding what “good” means before encoding a scorer.</p>
+      </div>
+      <div class="card">
+        <h3>2025 · Notes</h3>
+        <p>Streaming interfaces that respect attention — pacing, interruption, and showing your work.</p>
+      </div>
+      <div class="card">
+        <h3>2024 · Talk</h3>
+        <p>Small models, sharp edges — shipping governance rituals with dependable guardrails.</p>
+      </div>
+    </div>
   </section>
 
   <section>
@@ -61,3 +111,4 @@
   </footer>
 </body>
 </html>
+
