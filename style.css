@@ -1,3 +1,30 @@
-git add style.css
-git commit -m "Add ceremonial theme stylesheet"
-git push origin main
+:root {
+  --primary: #111111;     /* deep ceremonial black */
+  --secondary: #f9f9f9;   /* parchment background */
+  --accent: #c49b66;      /* golden glyph accent */
+  --highlight: #005f73;   /* teal for links or emphasis */
+}
+
+body {
+  background-color: var(--secondary);
+  color: var(--primary);
+  font-family: 'Crimson Text', serif;
+}
+
+header {
+  background: var(--primary);
+  color: var(--secondary);
+}
+
+section {
+  background: var(--secondary);
+  color: var(--primary);
+}
+
+footer {
+  background: var(--primary);
+  color: var(--secondary);
+}
+footer div {
+  color: var(--accent);
+}
