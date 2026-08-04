@@ -68,3 +68,5 @@ section {
   padding: 40px;
 }
 git commit -m "✨ Sealed footer with flame→governance gradient"
+git add style.css
+git push origin main
