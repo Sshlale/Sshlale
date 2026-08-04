@@ -62,3 +62,8 @@ footer {
 footer div {
   color: var(--arc); /* crimson arc glyphs */
 }
+section {
+  background: linear-gradient(135deg, var(--parchment), var(--gateway));
+  color: var(--governance);
+  padding: 40px;
+}
