@@ -53,3 +53,12 @@ footer {
 footer div {
   color: var(--flame);
 }
+footer {
+  background: linear-gradient(135deg, var(--flame), var(--governance));
+  color: var(--parchment);
+  padding: 30px;
+  text-align: center;
+}
+footer div {
+  color: var(--arc); /* crimson arc glyphs */
+}
