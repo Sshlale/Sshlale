@@ -28,3 +28,28 @@ footer {
 footer div {
   color: var(--accent);
 }
+/* Crown the scroll with glyph palette */
+:root {
+  --governance: #111111;
+  --parchment: #f9f9f9;
+  --flame: #c49b66;
+  --gateway: #005f73;
+  --arc: #9b2226;
+}
+
+/* Existing styles updated to use palette */
+header {
+  background: var(--governance);
+  color: var(--parchment);
+}
+section {
+  background: var(--parchment);
+  color: var(--governance);
+}
+footer {
+  background: var(--governance);
+  color: var(--parchment);
+}
+footer div {
+  color: var(--flame);
+}
